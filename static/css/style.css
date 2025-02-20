@@ -14261,6 +14261,9 @@ textarea {
 .hero-slide .img.overlay:nth-child(3) {
   background-image: url('/static/images/hero_bg_1.jpg');
 }
+#about-picture {
+  background-image: url('/static/images/struct2.jpg');
+}
 
 .hero-slide .img.overlay {
   position: relative;
@@ -14607,6 +14610,7 @@ textarea {
 
 .feature-h .feature-text {
   margin-top: 15px;
+
 }
 
 .feature-h .feature-text .heading {

@@ -41,12 +41,11 @@
         <div class="container">
             <div class="menu-bg-wrap">
                 <div class="site-navigation">
-                    <a href="index.html" class="logo m-0 float-start">Property</a>
+                    <a href="{% url 'index' %}" class="logo m-0 float-start">Property</a>
 
                     <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="properties.html">Properties</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'projects' %}">Our Projects</a></li>
                         <li><a href="{% url 'aboutus' %}">About</a></li>
                         <li><a href="#footer">Contact Us</a></li>
                     </ul>
@@ -92,8 +91,8 @@
                     <div class="widget">
                         <h3>Sources</h3>
                         <ul class="list-unstyled float-start links">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
+                            <li><a href="{% url 'aboutus' %}">About us</a></li>
+                            <li><a href="{% url 'projects' %}">Our Projects</a></li>
                         </ul>
                     </div> <!-- /.widget -->
                 </div> <!-- /.col-lg-4 -->

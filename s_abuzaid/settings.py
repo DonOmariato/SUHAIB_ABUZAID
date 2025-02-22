@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
+    'projects.apps.ProjectsConfig',
+    'admin_panl.apps.AdminPanlConfig',
 ]
 
 MIDDLEWARE = [

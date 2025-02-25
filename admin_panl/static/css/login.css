@@ -1,0 +1,28 @@
+
+.gradient-custom-2 {
+    background: #ffffff;
+
+    background: -webkit-linear-gradient(to right, #ffffff, #e6e6e6, #cccccc, #b3b3b3);
+
+    background: linear-gradient(to right, #ffffff, #e6e6e6, #cccccc, #b3b3b3);
+}
+
+#create-btn:hover {
+    background: #034444;
+}
+
+#create-btn {
+    border:2px solid #004b4b !important;
+}
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+}

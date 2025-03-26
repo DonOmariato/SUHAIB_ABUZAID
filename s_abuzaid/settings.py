@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'projects.apps.ProjectsConfig',
     'admin_panl.apps.AdminPanlConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -123,6 +124,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Media file
+
+MEDIA_ROOT= os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

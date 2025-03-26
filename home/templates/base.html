@@ -41,13 +41,15 @@
         <div class="container">
             <div class="menu-bg-wrap">
                 <div class="site-navigation">
-                    <img src="{% static 'images/logo.png' %}" width="110rem" class="logo m-0 position-absolute " style=" top: 15px; left:10px;">
+                    <img src="{% static 'images/logo.png' %}" width="110rem" class="logo m-0 position-absolute "
+                        style=" top: 15px; left:10px;">
 
                     <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
                         <li class="active"><a href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'projects' %}">Our Projects</a></li>
                         <li><a href="{% url 'aboutus' %}">About</a></li>
                         <li><a href="#footer">Contact Us</a></li>
+                        {% block extra_nav %} {% endblock %}
                     </ul>
 
                     <a href="#"
@@ -65,16 +67,15 @@
     {% endblock %}
     <div class="site-footer" id="footer">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-4">
                     <div class="widget">
                         <h3>Contact</h3>
-                        <address>43 Raymouth Rd. Baltemoer, London 3910</address>
+                        <address id="footer-address">{{ contact.address }}</address>
                         <ul class="list-unstyled links">
-                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                            <li><a href="tel://11234567890">+1(123)-456-7890</a></li>
-                            <li><a href="mailto:info@mydomain.com">info@mydomain.com</a></li>
+                            <li><a href="tel://{{ contact.phone1 }}" id="footer-phone1">{{ contact.phone1 }}</a></li>
+                            <li><a href="tel://{{ contact.phone2 }}" id="footer-phone2">{{ contact.phone2 }}</a></li>
+                            <li><a href="mailto:{{ contact.email }}" id="footer-email">{{ contact.email }}</a></li>
                         </ul>
                         <div class="col-lg-4">
                             <div class="widget">

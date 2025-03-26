@@ -1,0 +1,66 @@
+.edit-btn,
+.delete-btn {
+    padding: 5px 12px;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.edit-btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3 !important;
+}
+
+
+.delete-btn {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #a71d2a !important;
+}
+
+
+.bi {
+    font-size: 16px;
+}
+
+
+.d-flex.gap-1 {
+    gap: 8px;
+}
+
+/*Imag Model Style*/
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.project-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.delete-image-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: red;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}

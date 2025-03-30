@@ -13,7 +13,7 @@ function clickedModalShow(projectId) {
 
             const imageModel = document.getElementById("modal-images");
             imageModel.innerHTML = data.project.images.map(image =>
-                `<img src="${image.url}" alt="Project Image" class="project-image">`
+                `<img src="${image.url}" alt="Project Image" class="project-image" >`
             ).join("");
 
         })

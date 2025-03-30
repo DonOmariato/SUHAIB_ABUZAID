@@ -4,21 +4,38 @@
 {% block head %} {% endblock %}
 {% block content%}
 <div class="hero">
-
-
-	<div class="hero-slide">
-		<img src="{%static 'images/struct3.jpg'%}" class="img overlay">
-		<img src="{%static 'images/struct4.jpg'%}" class="img overlay">
-		<img src="{%static 'images/struct5.jpg'%}" class="img overlay">
-
+	<div class="hero-slide ">
+		<!-- <img src="{%static 'images/struct3.jpg'%}" class="img overlay"> -->
+		<picture>
+			<source srcset="{%static 'images/photo1.jpg'%}" media="(max-width:480px)" />
+			<source class="img overlay" srcset="{%static 'images/photo11.avif'%}" media="(max-width:768px)" />
+			<img src="{%static 'images/struct3.jpg'%}" class="img overlay w-100">
+		</picture>
+		<picture>
+			<source srcset="{%static 'images/photo2.avif'%}" media="(max-width:480px)" />
+			<source class="img overlay" srcset="{%static 'images/photo22.avif'%}" media="(max-width:768px)" />
+			<img src="{%static 'images/struct4.jpg'%}" class="img overlay w-100">
+		</picture>
+		<picture>
+			<source srcset="{%static 'images/photo3.jpg'%}" media="(max-width:480px)" />
+			<source class="img overlay" srcset="{%static 'images/photo33.jpg'%}" media="(max-width:768px)" />
+			<img src="{%static 'images/struct5.jpg'%}" class="img overlay w-100">
+		</picture>
+		<!-- <img src="{%static 'images/struct4.jpg'%}" class="img overlay">
+	
+		<img src="{%static 'images/struct5.jpg'%}" class="img overlay"> -->
 	</div>
-
+	<!-- <span class="position-absolute top-50 start-50 translate-middle" id="overlay"
+		style="background-color:#fff;width:100%;height:100vh;transform: scale(1.5) ;opacity:10%">
+	</span> -->
 	<div class="container">
-		<div class="row justify-content-center align-items-center">
-			<div class="col-lg-9 text-center">
-				<h1 class="heading" data-aos="fade-up">Towards new horizons in steel structures, we build the future
-					with our solid designs and innovative ideas.</h1>
-
+		<div class="row justify-content-center align-items-center ">
+			<div class=" ">
+				<div id="text-bg">
+					<p id="header-bg-text" data-aos="fade-up">
+						Towards new horizons in steel structures, we build the future with our solid designs and innovative ideas.
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>

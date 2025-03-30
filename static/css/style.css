@@ -515,6 +515,61 @@ iframe {
   border: 0;
 }
 
+#text-bg {
+  background-color: rgba(0, 85, 85, 0.4);
+  position: absolute;
+  width: min(80vw, 800px);
+  text-align: center;
+  border-radius: 0 12rem 12rem 0;
+  transition: all 0.3s ease;
+}
+
+#header-bg-text {
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.5rem
+}
+
+/* Larger screens */
+@media (min-width: 1024px) {
+  #text-bg {
+    width: 50vw;
+    padding: 1.5rem;
+    left: -2%;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  #text-bg {
+    width: 70vw;
+    padding: 3.25rem;
+    border-radius: 0 10rem 10rem 0;
+    left: -9%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  #text-bg {
+    width: 70vw;
+    padding: 1rem;
+    border-radius: 0 8rem 8rem 0;
+    left: -1%;
+  }
+
+  #header-bg-text {
+            font-size: 0.9rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  #text-bg {
+    padding: 0.75rem;
+  }
+}
+
 summary {
   display: list-item;
   cursor: pointer;

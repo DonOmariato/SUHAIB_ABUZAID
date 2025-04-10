@@ -1,4 +1,3 @@
-
 .edit-btn,
 .delete-btn {
     padding: 5px 12px;
@@ -70,4 +69,28 @@
 #fff {
     background-color: #fff;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+#admin-form {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(220, 220, 220);
+}
+
+.table-container {
+    height: 400px;
+    overflow: auto;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
 /********* Register Users Section ***********/

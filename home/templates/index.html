@@ -5,35 +5,32 @@
 {% block content%}
 <div class="hero">
 	<div class="hero-slide ">
-		<!-- <img src="{%static 'images/struct3.jpg'%}" class="img overlay"> -->
+
 		<picture>
 			<source srcset="{%static 'images/photo1.jpg'%}" media="(max-width:480px)" />
 			<source class="img overlay" srcset="{%static 'images/photo11.avif'%}" media="(max-width:768px)" />
-			<img src="{%static 'images/struct3.jpg'%}" class="img overlay w-100">
+			<img src="{%static 'images/struct7.jpg'%}" class="img overlay w-100">
 		</picture>
 		<picture>
 			<source srcset="{%static 'images/photo2.avif'%}" media="(max-width:480px)" />
 			<source class="img overlay" srcset="{%static 'images/photo22.avif'%}" media="(max-width:768px)" />
-			<img src="{%static 'images/struct4.jpg'%}" class="img overlay w-100">
+			<img src="{%static 'images/struct8.jpg'%}" class="img overlay w-100">
 		</picture>
 		<picture>
 			<source srcset="{%static 'images/photo3.jpg'%}" media="(max-width:480px)" />
 			<source class="img overlay" srcset="{%static 'images/photo33.jpg'%}" media="(max-width:768px)" />
-			<img src="{%static 'images/struct5.jpg'%}" class="img overlay w-100">
+			<img src="{%static 'images/struct9.jpg'%}" class="img overlay w-100">
 		</picture>
-		<!-- <img src="{%static 'images/struct4.jpg'%}" class="img overlay">
-	
-		<img src="{%static 'images/struct5.jpg'%}" class="img overlay"> -->
+
 	</div>
-	<!-- <span class="position-absolute top-50 start-50 translate-middle" id="overlay"
-		style="background-color:#fff;width:100%;height:100vh;transform: scale(1.5) ;opacity:10%">
-	</span> -->
+
 	<div class="container">
 		<div class="row justify-content-center align-items-center ">
 			<div class=" ">
 				<div id="text-bg">
 					<p id="header-bg-text" data-aos="fade-up">
-						Towards new horizons in steel structures, we build the future with our solid designs and innovative ideas.
+						Towards new horizons in steel structures, we build the future with our solid designs and
+						innovative ideas.
 					</p>
 				</div>
 			</div>
@@ -41,12 +38,11 @@
 	</div>
 </div>
 
-
 <div class="section">
 	<div class="container">
 		<div class="row mb-5 align-items-center">
 			<div class="col-lg-6">
-				<h2 class="font-weight-bold text-primary heading">Popular projects</h2>
+				<h2 class="font-weight-bold text-primary heading">Explore Our Projects</h2>
 			</div>
 			<div class="col-lg-6 text-lg-end">
 				<p><a href="{% url 'projects' %}" target="_blank" class="btn btn-primary text-white py-3 px-4">View all
@@ -58,132 +54,26 @@
 
 			<div class="col-12">
 
-
 				<div class="property-slider-wrap">
 
-
-
 					<div class="property-slider">
-
+						{% for project in projects %}
 						<div class="property-item">
 
-							<a href="property-single.html" class="img">
-								<img src="{% static 'images/img_1.jpg' %}" alt="Image" class="img-fluid">
+							<a href="#" class="img">
+								<img src="{{ project.images.first.images.url }}" alt="Image" class="img-fluid">
 							</a>
 
 							<div class="property-content">
-								<div class="price mb-2"><span>Prominad</span></div>
+								<div class="price mb-2"><span>{{ project.name }}</span></div>
 								<div>
-									<span class="d-block mb-2 text-black-50">5232 Amman swaileh</span>
-									<span class="city d-block mb-3">Amman-Jordan</span>
-
-
-
-									<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
+									<span class="city d-block mb-3">{{ project.location }}</span>
 								</div>
 							</div>
-						</div> <!-- .item -->
-
-
-
-						<div class="property-item">
-
-							<a href="property-single.html" class="img">
-								<img src="{% static 'images/img_5.jpg' %}" alt="Image" class="img-fluid">
-							</a>
-
-							<div class="property-content">
-								<div class="price mb-2"><span>Prominad</span></div>
-								<div>
-									<span class="d-block mb-2 text-black-50">5232 Amman-swailh</span>
-									<span class="city d-block mb-3">Jordan-Amman</span>
-
-
-
-									<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
-								</div>
-							</div>
-						</div> <!-- .item -->
-
-						<div class="property-item">
-
-							<a href="property-single.html" class="img">
-								<img src="{% static 'images/img_6.jpg' %}" alt="Image" class="img-fluid">
-							</a>
-
-							<div class="property-content">
-								<div class="price mb-2"><span>Prominad</span></div>
-								<div>
-									<span class="d-block mb-2 text-black-50">5232 Amman-swailh</span>
-									<span class="city d-block mb-3">Jordan-Amman</span>
-
-
-
-									<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
-								</div>
-							</div>
-						</div> <!-- .item -->
-
-						<div class="property-item">
-
-							<a href="property-single.html" class="img">
-								<img src="{% static 'images/img_7.jpg' %}" alt="Image" class="img-fluid">
-							</a>
-
-							<div class="property-content">
-								<div class="price mb-2"><span>Prominad</span></div>
-								<div>
-									<span class="d-block mb-2 text-black-50">5232 Amman-swailh</span>
-									<span class="city d-block mb-3">Jordan-Swailh</span>
-
-
-
-									<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
-								</div>
-							</div>
-						</div> <!-- .item -->
-
-						<div class="property-item">
-
-							<a href="property-single.html" class="img">
-								<img src="{% static 'images/img_8.jpg' %}" alt="Image" class="img-fluid">
-							</a>
-
-							<div class="property-content">
-								<div class="price mb-2"><span>Prominad</span></div>
-								<div>
-									<span class="d-block mb-2 text-black-50">5232 Amman-swailh</span>
-									<span class="city d-block mb-3">Jordan-Amman</span>
-
-
-
-									<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
-								</div>
-							</div>
-						</div> <!-- .item -->
-
-						<div class="property-item">
-
-							<a href="property-single.html" class="img">
-								<img src="{% static 'images/img_1.jpg' %}" alt="Image" class="img-fluid">
-							</a>
-
-							<div class="property-content">
-								<div class="price mb-2"><span>Prominad</span></div>
-								<div>
-									<span class="d-block mb-2 text-black-50">5232 Amman-swailh</span>
-									<span class="city d-block mb-3">Jordan-Amman</span>
-
-
-
-									<a href="property-single.html" class="btn btn-primary py-2 px-3">See details</a>
-								</div>
-							</div>
-						</div> <!-- .item -->
-
+						</div> <!-- .items -->
+						{% endfor%}
 
 					</div>
-
 
 					<div id="property-nav" class="controls" tabindex="0" aria-label="Carousel Navigation">
 						<span class="prev" data-controls="prev" aria-controls="property" tabindex="-1">Prev</span>
@@ -197,52 +87,13 @@
 	</div>
 </div>
 
-<section class="features-1">
-	<div class="container">
-		<div class="row">
-			<div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-				<div class="box-feature">
-					<span class="flaticon-house"></span>
-					<h3 class="mb-3">Our Properties</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.</p>
-					<p><a href="#" class="learn-more">Learn More</a></p>
-				</div>
-			</div>
-			<div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
-				<div class="box-feature">
-					<span class="flaticon-building"></span>
-					<h3 class="mb-3">Property for Sale</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.</p>
-					<p><a href="#" class="learn-more">Learn More</a></p>
-				</div>
-			</div>
-			<div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-				<div class="box-feature">
-					<span class="flaticon-house-3"></span>
-					<h3 class="mb-3">Real Estate Agent</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.</p>
-					<p><a href="#" class="learn-more">Learn More</a></p>
-				</div>
-			</div>
-			<div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
-				<div class="box-feature">
-					<span class="flaticon-house-1"></span>
-					<h3 class="mb-3">House for Sale</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.</p>
-					<p><a href="#" class="learn-more">Learn More</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 <div class="section section-4 bg-light">
 	<div class="container">
 		<div class="row justify-content-center text-center mb-5">
 			<div class="col-lg-5">
-				<h2 class="font-weight-bold heading text-primary mb-4">Let's find home that's perfect for you</h2>
-				<p class="text-black-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim
-					pariatur similique debitis vel nisi qui reprehenderit.</p>
+				<h2 class="font-weight-bold heading text-primary mb-4">What Makes Us Unique</h2>
+				<p class="text-black-50">We take pride in delivering quality, innovation, and reliability in every
+					project</p>
 			</div>
 		</div>
 		<div class="row justify-content-between mb-5 ">

@@ -134,3 +134,14 @@ MEDIA_URL='/media/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+####------------#### 
+AUTH_USER_MODEL = 'admin_panl.CustomAdmin'
+
+# Login settings 
+LOGIN_URL = '/admin_panl/login/'
+LOGIN_REDIRECT_URL = '/admin_panl/'
+
+
+#SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+

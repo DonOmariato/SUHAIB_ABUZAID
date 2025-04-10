@@ -1,4 +1,14 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+
+
+
+class CustomAdmin(AbstractUser):
+    email = models.EmailField(unique=True)
+    
+    def __str__(self):
+        return self.username
+
 
 class ContactInfo(models.Model):
      phone1=models.CharField(max_length=15)
@@ -17,5 +27,6 @@ class ContactInfo(models.Model):
     
      def __str__(self):
          return "Contact Information"
-      
+
+ 
          

@@ -245,7 +245,7 @@
                             <div class="container-fluid d-flex flex-wrap gap-2" id="edit-project-modal-images">
                                 {% for image in images %}
                                 <div class="image-wrapper">
-                                    <img src="{{ image.image.url }}" class="img-thumbnail project-image">
+                                    <img src="{{ image.image.url }}" loading="lazy" class="img-thumbnail project-image">
                                     <button type="button" class="delete-image-btn" data-id="{{ image.id }}">✖</button>
                                 </div>
                                 {% endfor %}

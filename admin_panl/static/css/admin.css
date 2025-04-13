@@ -93,4 +93,16 @@ body {
     gap: 10px;
 }
 
+/* @media (max-width: 768px) {
+    #modal-template {
+        overflow: scroll;
+    }
+}
+
+@media (max-width: 576px) {
+    #modal-template {
+        overflow: scroll;
+    }
+} */
+
 /********* Register Users Section ***********/
